@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Our Location | ACE DOOFER</title>
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <img id="logoImg" src="ace.png" alt="ACE DOOFER">
+        </a>
+    </div>
+
+    <div class="gender-select">
+    <a href="man.html" class="gender-btn">KING</a>
+    <a href="woman.html" class="gender-btn">QUEEN</a>
+    <a href="wild.html" class="gender-btn">WILD CARDS</a>
+    <a href="collection.html" class="gender-btn">NEW DECK</a>
+    <a href="cart.html" class="gender-btn">CART</a>
+    </nav>
+</div>
+</header>
+
+<section class="location-section">
+
+    <div class="location-info">
+        <h2>OUR LOCATION</h2>
+
+        <p>
+            ACE DOOFER FLAGSHIP<br>
+            149 West Bridge St<br>
+            Homestead, PA 15120
+        </p>
+
+        <p>
+            Mon – Sat: 10:00 – 20:00<br>
+            Sunday: 12:00 – 18:00
+        </p>
+            +1 (555) 712-2007
+        </p>
+
+        <a href="https://www.google.com/maps/dir/?api=1&destination=40.4053,-79.9129"
+           target="_blank"
+           class="map-btn">
+           GET DIRECTIONS
+        </a>
+    </div>
+
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+</section>
+
+<script>
+    var map = L.map('map').setView([40.4053, -79.9129], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([40.4053, -79.9129]).addTo(map)
+        .bindPopup('ACE DOOFER Store<br>149 West Bridge St')
+        .openPopup();
+</script>
+
+</script>
+<footer>
+    © 2026 ACE DOOFER — Always the Ace.
+</footer>
+
+<footer>
+    This site is a project for the university and the products shown on the site are not commercial. "Ace Doofer" does not exist as a brand of clothing and footwear.
+</footer>
+
+
+</body>
+</html>

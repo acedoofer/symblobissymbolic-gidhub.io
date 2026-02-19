@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Cart</title>
+<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="ace.png" alt="ACE DOOFER"></a>
+    </div>
+    <nav>
+    <a href="man.html" class="gender-btn">KING</a>
+    <a href="woman.html" class="gender-btn">QUEEN</a>
+    <a href="wild.html" class="gender-btn">WILD CARDS</a>
+    <a href="collection.html" class="gender-btn">NEW DECK</a>
+    <a href="locator.html" class="gender-btn">THE MAP</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>YOUR CART</h1>
+    <div class="card-wrapper">
+</div>
+
+<script src="cart.js"></script>
+
+<div class="cart-wrapper">
+  <div id="cart-items"></div>
+
+  <div class="cart-summary">
+    <h2 id="total"></h2>
+    <button class="btn-main">Checkout</button>
+    <button class="btn-outline" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+<script>
+function loadCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let container = document.getElementById("cart-items");
+  let totalDisplay = document.getElementById("total");
+  let total = 0;
+
+  container.innerHTML = "";
+
+  if (!cart || cart.length === 0) {
+    container.innerHTML = "<p class='empty'>Your hand is empty. Draw some cards (shop).</p>";
+    totalDisplay.innerText = "Total: $0";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    total += parseFloat(item.price); // Преобразуем в число на случай ошибки
+
+    container.innerHTML += `
+      <div class="cart-item" style="border-bottom: 1px solid #333; padding: 15px 0; display: flex; align-items: center;">
+        <img src="${item.image}" class="cart-img" style="width: 80px; margin-right: 20px;">
+        <div class="cart-info" style="flex-grow: 1;">
+          <h3 style="margin: 0; letter-spacing: 2px;">${item.name}</h3>
+          <p style="color: #888;">$${item.price}</p>
+        </div>
+        <button class="btn-remove" onclick="removeItem(${index})" style="background: none; border: 1px solid #f00; color: #f00; cursor: pointer; padding: 5px 10px;">
+          Remove
+        </button>
+      </div>
+    `;
+  });
+
+  // Округляем до двух знаков после запятой
+  totalDisplay.innerText = "Total: $" + total.toFixed(2);
+}
+
+// Вызываем загрузку при старте
+document.addEventListener("DOMContentLoaded", loadCart);
+</script>
+</body>
+</html>

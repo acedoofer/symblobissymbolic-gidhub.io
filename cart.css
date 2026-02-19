@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid #222;
+}
+
+.logo img {
+    height: 45px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    letter-spacing: 6px;
+}
+
+.hero h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.section {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+/* Карточки товаров */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Плавная анимация появления */
+body {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.collection .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.card .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 40px;
+}
+
+.gender-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.gender-buttons button{
+    background:none;
+    border:1px solid white;
+    padding:6px 15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gender-buttons button:hover{
+    background:black;
+    color:white;
+}
+
+.logo img{
+    height:40px;
+}
+
+
+.gender-select{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:10px;
+}
+
+.gender-btn{
+    text-decoration:none;
+    padding:6px 18px;
+    border:2px solid white;
+    background:black;
+    color:white;
+    font-size:13px;
+    letter-spacing:2px;
+    transition:0.3s ease;
+}
+
+/* Эффект наведения */
+.gender-btn:hover{
+    background:white;
+    color:black;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background: #111; /* если у тебя тёмный сайт */
+}
+
+.map-container {
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+.map-title {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.location-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 10%;
+    background:#111;
+    color:white;
+    gap:60px;
+}
+
+.location-info{
+    flex:1;
+}
+
+.location-info h2{
+    font-size:32px;
+    margin-bottom:30px;
+    letter-spacing:3px;
+}
+
+.location-info p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.map-container{
+    flex:1;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+#map{
+    height:500px;
+    width:100%;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.map-btn:hover{
+    background:white;
+    color:black;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; /* Расстояние между иконками */
+    align-items: center;
+}
+
+.social-icon {
+    color: #fff; /* Цвет иконок под ваш черный фон */
+    font-size: 18px; /* Размер как на скриншоте */
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.6; /* Легкое затухание при наведении, как в премиум брендах */
+}
+
+.card-info button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.card-info button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.cart-title {
+  text-align: center;
+  padding: 50px 0 30px;
+  letter-spacing: 3px;
+}
+
+.cart-wrapper {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+
+#cart-items {
+  flex: 2;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.cart-img {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h3 {
+  margin: 0 0 5px;
+}
+
+.cart-summary {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 30px;
+}
+
+.btn-main {
+  width: 100%;
+  padding: 14px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn-main:hover {
+  background: #ccc;
+}
+
+.btn-outline,
+.btn-remove {
+  padding: 12px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-outline:hover,
+.btn-remove:hover {
+  background: white;
+  color: black;
+}
+
+.empty {
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.cart-title {
+    text-align: center;
+    padding-top: 250px; 
+    letter-spacing: 5px;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.gender-btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid white; 
+    background: transparent; 
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.gender-btn:hover {
+    background: white !important; 
+    color: black !important;  
+    opacity: 1 !important; 
+}
+
+header {
+    position: static;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    z-index: 100;
+}
